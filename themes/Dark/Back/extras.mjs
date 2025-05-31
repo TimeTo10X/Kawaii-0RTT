@@ -11,8 +11,8 @@
     Kawai_loader.change_view(const QString& view);
 */
 export function provide_loader_context() {
-    return {
-        Auth: "Front/Auth.qml",
-        Menu: "Front/Menu.qml",
-    };
+  return {
+    Auth: "Front/Auth.qml",
+    Menu: "Front/Menu.qml",
+  };
 }
