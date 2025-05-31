@@ -9,7 +9,9 @@ Window {
     id: root
 
     maximumWidth: 400
-    maximumHeight: 650
+    minimumWidth: 400
+    maximumHeight: 550
+    minimumHeight: 550
 
     property bool is_main: false
 
@@ -26,7 +28,8 @@ Window {
     Rectangle {
         width: 100
         height: 100
-        color: "#1818b0"
+        color: "cyan"
+        anchors.bottom: parent.bottom
 
         MouseArea {
             anchors.fill: parent
@@ -34,9 +37,10 @@ Window {
             onClicked: {
                 const context = Extras.provide_loader_context();
                 console.log(context.Menu);
+
                 if (!root.is_main) {
                     Kawaii_loader.change_view(context.Menu);
-                    root.is_main = trusude;
+                    root.is_main = true;
                 } else {
                     Kawaii_loader.change_view(context.Auth);
                     root.is_main = false;
