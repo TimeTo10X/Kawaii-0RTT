@@ -5,6 +5,7 @@
 #include "QtQmlIntegration/qqmlintegration.h"
 #include "qobject.h"
 #include "qtmetamacros.h"
+#include "qurl.h"
 
 class CppUtils : public QObject {
     Q_OBJECT
@@ -18,6 +19,7 @@ class CppUtils : public QObject {
 
    public:
     static CppUtils* create(QQmlApplicationEngine* qml_engine);
+    Q_INVOKABLE double calc_width_for_src(const QString& path, double height) const;
 
    private:
     double m_scale_factor;
