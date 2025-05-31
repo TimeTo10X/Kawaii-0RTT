@@ -17,8 +17,6 @@ qt_add_executable(appkawaii
 qt_add_qml_module(appkawaii
     URI kawaii
     VERSION 1.0
-    QML_FILES
-        Main.qml
 )
 
 add_subdirectory(themes/Dark)
@@ -39,6 +37,8 @@ target_link_libraries(appkawaii
         kawaii_loader
         js_utils
 )
+
+target_compile_definitions(appkawaii PRIVATE QT_QML_DEBUG)
 
 include(GNUInstallDirs)
 install(TARGETS appkawaii
