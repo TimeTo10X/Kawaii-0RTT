@@ -1,4 +1,4 @@
-### Themes
+# Themes
 
 ```mermaid
 graph LR;
