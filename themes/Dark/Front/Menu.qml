@@ -8,7 +8,7 @@ Item {
         width: root.width
         height: root.height
 
-        color: "magenta"
+        color: "#18181b"
 
         z: -1
     }
